@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>松下S5M2第二期策划 - 富士升级全画幅</title>
+<style>
+  :root {
+    --bg: #fafaf8;
+    --card: #ffffff;
+    --text: #2c2c2c;
+    --text2: #5a5a5a;
+    --text3: #888;
+    --accent: #d44a2c;
+    --accent2: #e8a020;
+    --accent-bg: #fef5f3;
+    --accent-bg2: #fffaf0;
+    --border: #e8e5e0;
+    --divider: #eeeae4;
+    --heading: #1a1a1a;
+    --tag-bg: #f3f0eb;
+    --fuji: #3b3b3b;
+    --panasonic: #004ea8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container { max-width: 780px; margin: 0 auto; padding: 56px 28px 80px; }
+
+  /* ===== Hero ===== */
+  .hero {
+    text-align: center;
+    padding: 48px 0 40px;
+    border-bottom: 1px solid var(--divider);
+    margin-bottom: 48px;
+  }
+  .hero .label-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .hero .tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+  .tag.fuji    { background: #f0ebe3; color: #7a6a55; }
+  .tag.series  { background: #e8eef5; color: #3b5f8a; }
+  .tag.format  { background: #eef2e8; color: #5a7840; }
+
+  .hero h1 {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--heading);
+    letter-spacing: 0.01em;
+    line-height: 1.35;
+    margin-bottom: 14px;
+  }
+  .hero .hook {
+    font-size: 17px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .hero .sub {
+    font-size: 14.5px;
+    color: var(--text3);
+    font-weight: 400;
+  }
+
+  /* ===== Section ===== */
+  .section { margin-bottom: 44px; }
+
+  .section-title {
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--heading);
+    margin-bottom: 16px;
+    padding-left: 16px;
+    border-left: 3px solid var(--accent);
+    line-height: 1.35;
+  }
+  .section-title.sub {
+    font-size: 18px;
+    padding-left: 14px;
+    border-left-color: var(--accent2);
+    margin-top: 32px;
+  }
+
+  .section p {
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 12px;
+    text-align: justify;
+  }
+  .section p:last-child { margin-bottom: 0; }
+
+  /* ===== Info card ===== */
+  .info-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin: 18px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  }
+  .info-card .card-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+  }
+  .info-card .card-label.gold { color: var(--accent2); }
+
+  /* ===== Timeline ===== */
+  .timeline { list-style: none; padding: 0; margin: 18px 0; }
+  .timeline li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--border);
+    font-size: 14.5px;
+  }
+  .timeline li:last-child { border-bottom: none; }
+  .timeline .time-badge {
+    flex-shrink: 0;
+    width: 64px;
+    text-align: center;
+    background: var(--accent-bg);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 13px;
+    padding: 3px 0;
+    border-radius: 6px;
+  }
+  .timeline .time-label { color: var(--text); font-weight: 600; }
+  .timeline .time-desc { color: var(--text2); font-size: 13px; margin-top: 2px; }
+
+  /* ===== Angle block ===== */
+  .angle-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  }
+  .angle-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--border);
+  }
+  .angle-num {
+    width: 34px; height: 34px;
+    line-height: 34px; text-align: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .angle-num.five { background: #5b7faa; }
+  .angle-num.six  { background: #6b8e5a; }
+  .angle-num.seven { background: #8b5ea0; }
+
+  .angle-header h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--heading);
+  }
+  .angle-header .emoji { font-size: 18px; }
+
+  .angle-body { padding: 20px 22px; }
+  .angle-body h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text2);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 16px 0 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--divider);
+  }
+  .angle-body h4:first-child { margin-top: 0; }
+
+  .angle-body p { font-size: 14.5px; margin-bottom: 10px; }
+
+  .script-block {
+    background: #fdfbf9;
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 10px 0;
+    border-left: 3px solid var(--accent2);
+  }
+  .script-block p { font-size: 14px; color: #3d3226; margin-bottom: 6px; }
+  .script-block p:last-child { margin-bottom: 0; }
+
+  .shot-note {
+    font-size: 13px;
+    color: var(--text3);
+    background: #fafaf8;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 8px 0;
+  }
+  .shot-note strong { color: var(--text2); }
+
+  /* ===== Table ===== */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  .compare-table th {
+    background: #f5f3ef;
+    font-weight: 700;
+    color: var(--heading);
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 2px solid var(--border);
+    font-size: 13px;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--divider);
+    color: var(--text);
+  }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table .winner { color: #2a7a3a; font-weight: 600; }
+  .compare-table .loser  { color: #b84040; }
+
+  /* ===== Summary box ===== */
+  .summary-box {
+    background: linear-gradient(135deg, #fef5f3 0%, #fffaf0 100%);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 24px;
+    margin: 28px 0;
+    text-align: center;
+  }
+  .summary-box h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--heading);
+    margin-bottom: 10px;
+  }
+  .summary-box p {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.75;
+  }
+
+  /* ===== Check list ===== */
+  .check-list { list-style: none; padding: 0; margin: 14px 0; }
+  .check-list li {
+    font-size: 14px;
+    color: var(--text);
+    padding: 7px 0 7px 22px;
+    position: relative;
+  }
+  .check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* ===== Footer ===== */
+  .footer {
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid var(--divider);
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 640px) {
+    .container { padding: 28px 14px 48px; }
+    .hero h1 { font-size: 23px; }
+    .section-title { font-size: 18px; }
+    .angle-body { padding: 14px 16px; }
+    .compare-table { font-size: 12px; }
+    .compare-table th, .compare-table td { padding: 6px 8px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- ====== HERO ====== -->
+<div class="hero">
+  <div class="label-row">
+    <span class="tag fuji">富士用户</span>
+    <span class="tag series">松下S5M2 · 第二期</span>
+    <span class="tag format">种草视频策划案</span>
+  </div>
+  <h1>从富士到松下S5M2<br>全画幅降维打击</h1>
+  <div class="hook">你的下一台相机，何必是半幅</div>
+  <div class="sub">主播：小不忍 &nbsp;|&nbsp; 目标时长：约12分钟 &nbsp;|&nbsp; 2026.05.31</div>
+</div>
+
+<!-- ====== 策划概要 ====== -->
+<div class="section">
+  <h2 class="section-title">策划概要</h2>
+
+  <div class="info-card">
+    <div class="card-label">选题定位</div>
+    <p style="font-size:15px;color:var(--heading);font-weight:600;margin-bottom:6px;">「从富士到松下S5M2 —— 全画幅降维打击，你的下一台相机何必是半幅」</p>
+    <p style="font-size:14px;color:var(--text2);">这是一期精准面向富士APS-C用户的"换门"种草视频。不贬低富士，而是用数据和场景对比，让观众自己得出结论：万元预算，全画幅 S5M2 是更理性的选择。</p>
+  </div>
+
+  <div class="info-card" style="margin-top:14px;">
+    <div class="card-label gold">目标受众 &amp; 情绪钩子</div>
+    <p style="font-size:14px;"><strong>核心受众：</strong>手持富士APS-C机型（X-T30/X-S20/X-T50等）、种草全画幅但犹豫换门的用户。</p>
+    <p style="font-size:14px;"><strong>情绪钩子：</strong>富士溢价严重 &amp; 一机难求 → 对焦拉胯拍娃抓不住 → 高感差夜景没法看 → 视频弱且过热。但又怕换了全画幅丢了直出好看——S5M2 恰好完美承接：LUT 系统 = 无限个胶片模拟，比富士还"富士"。</p>
+  </div>
+</div>
+
+<!-- ====== 节目结构 ====== -->
+<div class="section">
+  <h2 class="section-title">节目结构</h2>
+
+  <ul class="timeline">
+    <li>
+      <span class="time-badge">0:00~1:00</span>
+      <div>
+        <div class="time-label">🎬 开场：富士用户的「甜蜜的烦恼」</div>
+        <div class="time-desc">以富士用户真实吐槽切入——加价抢不到、对焦抽搐、高感翻车。引出核心问题：万元预算，何必死守APS-C？</div>
+      </div>
+    </li>
+    <li>
+      <span class="time-badge">1:00~2:20</span>
+      <div>
+        <div class="time-label">① 画幅升级：APS-C → 全画幅的质变</div>
+        <div class="time-desc">夜景扫街 ISO 6400 vs 1600、室内人像虚化、逆光暗部死黑对比</div>
+      </div>
+    </li>
+    <li>
+      <span class="time-badge">2:20~3:40</span>
+      <div>
+        <div class="time-label">② LUT 继承直出：比富士还"富士"</div>
+        <div class="time-desc">换门最大心结——直出好看怎么解决？LUT导入=无限胶片模拟</div>
+      </div>
+    </li>
+    <li>
+      <span class="time-badge">3:40~5:00</span>
+      <div>
+        <div class="time-label">③ 视频能力质变：从业余到专业</div>
+        <div class="time-desc">6K 30p、主动散热无限录制、波形监视器、ProRes RAW</div>
+      </div>
+    </li>
+    <li>
+      <span class="time-badge">5:00~6:00</span>
+      <div>
+        <div class="time-label">④ 性价比逆袭：八千多的全画幅</div>
+        <div class="time-desc">价格对比表 +「多加两三千抢中画幅？不如八千多买全画幅」</div>
+      </div>
+    </li>
+    <li>
+      <span class="time-badge">6:00~7:10</span>
+      <div>
+        <div class="time-label">⑤ 对焦翻身：松下终于不"抽搐"了</div>
+        <div class="time-desc">拍娃追焦对比、暗光对焦、779点PDAF</div>
+      </div>
+    </li>
+    <li>
+      <span class="time-badge">7:10~8:10</span>
+      <div>
+        <div class="time-label">⑥ 专业配置拉满：同价位富士给不了的</div>
+        <div class="time-desc">双SD卡槽、主动散热、全尺寸HDMI、监听/麦克风、双原生ISO</div>
+      </div>
+    </li>
+    <li>
+      <span class="time-badge">8:10~9:20</span>
+      <div>
+        <div class="time-label">⑦ L卡口联盟：镜头比你想象的多</div>
+        <div class="time-desc">适马+徕卡加持，1.8军团、天涯头、适马65 F2</div>
+      </div>
+    </li>
+    <li>
+      <span class="time-badge">9:20~10:30</span>
+      <div>
+        <div class="time-label">🎯 结尾升华：不是富士不好，是万元预算你有更好的选择</div>
+        <div class="time-desc">总结7个角度，一句话收尾</div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<!-- ====== 开场 ====== -->
+<div class="section">
+  <h2 class="section-title">🎬 开场（1分钟）：富士用户的「甜蜜的烦恼」</h2>
+
+  <div class="script-block">
+    <p><strong>口播文案：</strong></p>
+    <p>上期咱们聊了松下的当家花旦 S5M2，评论区炸出一堆富士用户——「小不忍，你说这么好，可我富士的直出颜色舍不得啊」「纠结死了，想升全画幅又怕丢了这口直出」。</p>
+    <p>兄弟们，今天我专门为你们做一期。你手里的富士 APS-C，加价抢来的、溢价买来的、蹲点蹲来的——它真的值那个价吗？你的下一台相机，何必是半幅？</p>
+    <p>咱们不吹不黑，七个角度，一个一个掰扯。</p>
+  </div>
+
+  <div class="shot-note">
+    <strong>🎥 画面建议：</strong>主播手持富士相机入镜 → 放到一边，拿起S5M2 → 字幕弹出"7个角度 · 全画幅降维打击"
+  </div>
+</div>
+
+<!-- ====== 角度1 ====== -->
+<div class="section">
+  <h2 class="section-title">七大核心角度</h2>
+
+  <!-- 角度1：画幅升级 -->
+  <div class="angle-block">
+    <div class="angle-header">
+      <span class="angle-num">1</span>
+      <span class="emoji">📐</span>
+      <h3>画幅升级：APS-C 到全画幅的质变</h3>
+    </div>
+    <div class="angle-body">
+      <h4>🎤 口播文案</h4>
+      <div class="script-block">
+        <p>先说最根本的——底大一级压死人，这句话在富士用户身上体现得淋漓尽致。</p>
+        <p>富士 X-T5、X-T50，用的都是 APS-C。白天光线好还行，一到晚上出门扫街，问题就来了：别人全画幅 ISO 开到 3200 干干净净，你富士 ISO 1600 彩色噪点就开始跳舞了。</p>
+        <p>S5M2 这块全画幅 2400 万像素底，ISO 6400 随便用，暗光下比你富士 ISO 1600 还干净。这意味着什么？同样的夜景，你能用更高的快门速度，不容易糊片；或者同样的参数，画面纯净度直接碾压。</p>
+      </div>
+
+      <h4>📊 对比数据</h4>
+      <table class="compare-table">
+        <tr><th>场景</th><th>富士 APS-C（X-T50/X-T5）</th><th>松下 S5M2（全画幅）</th></tr>
+        <tr><td>可用高感</td><td class="loser">ISO 1600 出现彩噪</td><td class="winner">ISO 6400 画面干净</td></tr>
+        <tr><td>动态范围（暗部）</td><td class="loser">逆光暗部容易死黑</td><td class="winner">V-Log 14+ 档，暗部拉回细节丰富</td></tr>
+        <tr><td>浅景深虚化</td><td class="loser">F1.4≈全幅F2.1，勉强</td><td class="winner">全画幅天然优势，F1.8轻松出糖水</td></tr>
+      </table>
+
+      <div class="shot-note">
+        <strong>🎥 画面建议：</strong>分屏对比——同一夜景场景，富士 ISO 3200 vs S5M2 ISO 6400 直出。再切到室内人像，同光圈下虚化量对比。逆光人像暗部细节对比。
+      </div>
+    </div>
+  </div>
+
+  <!-- 角度2：LUT继承直出 -->
+  <div class="angle-block">
+    <div class="angle-header">
+      <span class="angle-num">2</span>
+      <span class="emoji">🎨</span>
+      <h3>LUT 继承直出：比富士还"富士"，无限胶片模拟</h3>
+    </div>
+    <div class="angle-body">
+      <h4>🎤 口播文案</h4>
+      <div class="script-block">
+        <p>这是富士用户最大的心结——换门怕丢了直出好看。毕竟富士的胶片模拟，Classic Chrome、Nostalgic Neg，拍完直发朋友圈，这体验确实爽。</p>
+        <p>但你知道吗？松下 S5M2 的 LUT 导入系统，比富士的胶片模拟还要自由。富士给你十几个预设——松下给你无限个。</p>
+        <p>网上大神做的富士胶片模拟风格的 Cube 文件，直接下载，手机就能导进相机里。Classic Chrome 风格的？有。Nostalgic Neg 的？也有。甚至你可以两个滤镜叠在一起，调个透明度——创造出这个世界上只有你一个人有的色彩风格。</p>
+        <p>而且照片视频都支持，不像有些机器只能监看用。你设个快捷键，一键切换，比富士换胶片模拟还快。</p>
+      </div>
+
+      <h4>📊 LUT vs 胶片模拟</h4>
+      <table class="compare-table">
+        <tr><th>对比维度</th><th>富士胶片模拟</th><th>松下 LUT 导入</th></tr>
+        <tr><td>可用数量</td><td class="loser">机身内置 19 种（固定）</td><td class="winner">理论上无限（Cube/VLT文件随便导）</td></tr>
+        <tr><td>照片支持</td><td>✅ 支持</td><td class="winner">✅ 照片+视频双支持</td></tr>
+        <tr><td>格式标准</td><td>富士私有，不可导出</td><td class="winner">开放 Cube 标准，全网通用</td></tr>
+        <tr><td>透明度调节</td><td class="loser">❌ 不支持</td><td class="winner">✅ 0-100% 自由调节</td></tr>
+        <tr><td>混色叠加</td><td class="loser">❌ 不支持</td><td class="winner">✅ 两个滤镜叠加混出专属风格</td></tr>
+        <tr><td>导入方式</td><td>—</td><td class="winner">手机直传，不用开电脑</td></tr>
+      </table>
+
+      <div class="shot-note">
+        <strong>🎥 画面建议：</strong>手机屏幕录屏 → App下载Cube文件 → 蓝牙/WiFi传进S5M2 → 相机屏幕上切换不同LUT → 同一场景分别用富士X-T50直出和S5M2+LUT直出对比。字幕强调"无限个胶片模拟"。
+      </div>
+    </div>
+  </div>
+
+  <!-- 角度3：视频能力质变 -->
+  <div class="angle-block">
+    <div class="angle-header">
+      <span class="angle-num">3</span>
+      <span class="emoji">🎥</span>
+      <h3>视频能力质变：从业余 Vlog 到专业创作者的跃迁</h3>
+    </div>
+    <div class="angle-body">
+      <h4>🎤 口播文案</h4>
+      <div class="script-block">
+        <p>富士用户拍视频有多痛，用过的都懂。4K 录制半小时不到，屏幕弹出一个温度计图标——过热关机。对焦抽搐、拉风箱，暗光下更是犹豫到让你砸相机。</p>
+        <p>S5M2，6K 30p 无裁切内录，全画幅超采样，画面锐度比你富士 4K 强一档。最关键的是——取景器下面那个散热风扇，主动散热，无限录制。拍婚庆一场几小时、搞直播一天，它不罢工。</p>
+        <p>还有专业视频功能：波形监视器——曝光准不准一目了然；快门角度控制——拍电影才有的东西；V-Log 双原生 ISO，暗光下画面干干净净。甚至付费解锁 ProRes RAW 外录——这是从业余 Vlog 到专业视频创作者的跃迁。</p>
+      </div>
+
+      <table class="compare-table">
+        <tr><th>视频规格</th><th>富士 X-T50</th><th>松下 S5M2</th></tr>
+        <tr><td>最高录制</td><td class="loser">6.2K 30p（裁切）/ 4K 60p</td><td class="winner">6K 30p 无裁切全画幅超采样</td></tr>
+        <tr><td>录制时长</td><td class="loser">约30分钟过热关机</td><td class="winner">主动散热风扇，无限录制</td></tr>
+        <tr><td>专业监看</td><td class="loser">❌ 无波形监视器</td><td class="winner">✅ 波形监视器 + 矢量示波器</td></tr>
+        <tr><td>快门角度</td><td class="loser">❌ 不支持</td><td class="winner">✅ 电影级快门角度控制</td></tr>
+        <tr><td>RAW外录</td><td class="loser">❌ 不支持</td><td class="winner">✅ 付费解锁 ProRes RAW（外接SSD）</td></tr>
+        <tr><td>防抖（视频）</td><td class="loser">拍照优化，运镜"较劲"</td><td class="winner">视频专用优化，手持如三脚架</td></tr>
+      </table>
+
+      <div class="shot-note">
+        <strong>🎥 画面建议：</strong>富士录制30分钟后过热警告特写 → 切S5M2录制2小时依然正常工作（俯拍风扇出风口热气升腾）。S5M2手持走路跟拍（打开电子防抖）vs 富士手持跟拍画面稳度对比。
+      </div>
+    </div>
+  </div>
+
+  <!-- 角度4：性价比逆袭 -->
+  <div class="angle-block">
+    <div class="angle-header">
+      <span class="angle-num">4</span>
+      <span class="emoji">💰</span>
+      <h3>性价比逆袭：八千多的全画幅，打你一万元的APS-C</h3>
+    </div>
+    <div class="angle-body">
+      <h4>🎤 口播文案</h4>
+      <div class="script-block">
+        <p>聊到价格，这个就扎心了。</p>
+        <p>富士 X-T50 单机身，官方定价 9999 元——注意，这是一台 APS-C。你知道 9999 元在全画幅阵营能买到什么吗？松下 S5M2，八千多，全画幅。</p>
+        <p>什么意思？你花更多的钱，买了一块更小的底。多花两千块买个半幅机身，还是少花一千块买个全画幅——这笔账不难算吧？</p>
+        <p>还有人说「那我多加两三千上富士中画幅 GFX」，兄弟你冷静一下——GFX100S II 一万三四，但那是中画幅吗？那是残幅中画幅（4433），镜头群又贵又少。你不如省下那五千块，买个 S5M2 再加一支适马 65mm F2 还找零。</p>
+      </div>
+
+      <table class="compare-table">
+        <tr><th>机型</th><th>画幅</th><th>单机身参考价</th><th>定位</th></tr>
+        <tr><td>富士 X-S20</td><td>APS-C</td><td>约 8799 元</td><td>入门视频</td></tr>
+        <tr><td>富士 X-T50</td><td>APS-C</td><td>9999 元</td><td>中端拍照</td></tr>
+        <tr><td>富士 X-T5</td><td>APS-C</td><td>约 11990 元</td><td>旗舰 APS-C</td></tr>
+        <tr style="background:#fefaf6;"><td><strong>松下 S5M2</strong></td><td><strong>全画幅</strong></td><td class="winner"><strong>约 8300~8800 元</strong></td><td><strong>全画幅水桶机</strong></td></tr>
+      </table>
+
+      <div class="shot-note">
+        <strong>🎥 画面建议：</strong>价格柱状图动画——富士X-T50柱（9999元，APS-C标签）高高在上，S5M2柱（8399元，全画幅标签）更低→字幕弹出"全画幅比APS-C还便宜？"→主播摊手表情。
+      </div>
+    </div>
+  </div>
+
+  <!-- 角度5：对焦翻身 -->
+  <div class="angle-block">
+    <div class="angle-header">
+      <span class="angle-num five">5</span>
+      <span class="emoji">🎯</span>
+      <h3>对焦翻身：松下终于不「抽搐」了，富士还在拉风箱</h3>
+    </div>
+    <div class="angle-body">
+      <h4>🎤 口播文案</h4>
+      <div class="script-block">
+        <p>松下以前对焦确实不行——反差对焦，录视频时画面轻微抽搐，这也是为什么老玩家一直吐槽。但在 S5M2 这一代，松下直接掀桌子了——首款相位对焦机型，779 点 PDAF。</p>
+        <p>你现在用它拍娃、拍宠物、拍运动——人眼/动物/车辆识别全都有，固件更新之后追焦稳定性已经接近索尼佳能的第一梯队水准。</p>
+        <p>反过来看富士，别看它吹什么"AI 智能对焦"，实测动态追焦、暗光对焦，对比同价位机型至少落后一代。拍好动的小孩，十张糊五张，你说气不气？</p>
+      </div>
+
+      <div class="shot-note">
+        <strong>🎥 画面建议：</strong>"拍娃"场景——小朋友从远处跑向镜头，富士（X-T50/X-T5）人脸识别框反复跳动+抽搐，S5M2人脸+眼部牢牢锁住。暗光环境（咖啡厅内）两机对焦速度对比。字幕：「富士：我在找焦点… S5M2：已经锁好了」。
+      </div>
+    </div>
+  </div>
+
+  <!-- 角度6：专业配置拉满 -->
+  <div class="angle-block">
+    <div class="angle-header">
+      <span class="angle-num six">6</span>
+      <span class="emoji">⚙️</span>
+      <h3>专业配置拉满：同价位富士给不了的安全感</h3>
+    </div>
+    <div class="angle-body">
+      <h4>🎤 口播文案</h4>
+      <div class="script-block">
+        <p>接下来说几个富士同价位根本给不了的专业配置。</p>
+        <p>双 SD 卡槽——拍婚礼、拍活动，一张 RAW 一张 JPG，即时备份，数据安全感直接拉满。富士 X-T50？单卡槽。</p>
+        <p>主动散热风扇——前面说了，无限录制不罢工，直播一天机器还是凉的。富士？录半小时就开始发烫。</p>
+        <p>全尺寸 HDMI——接监视器、接切换台，不用转接头，牢靠得很。还有监听接口、麦克风输入、双原生 ISO——这些是干活的人才知道有多香的东西。</p>
+      </div>
+
+      <ul class="check-list">
+        <li>双 SD 卡槽——即时备份，数据安全感拉满（富士 X-T50/X-S20：单卡槽）</li>
+        <li>内置主动散热风扇——无限录制，直播一天不过热</li>
+        <li>全尺寸 HDMI——接监视器/切换台牢靠不松动</li>
+        <li>3.5mm 监听 + 麦克风接口——独立监听话筒收音</li>
+        <li>双原生 ISO——暗光画面纯净度质变</li>
+        <li>镁铝合金机身 + 防尘防滴——户外拍摄不娇气</li>
+      </ul>
+
+      <div class="shot-note">
+        <strong>🎥 画面建议：</strong>快速剪辑——双SD卡槽特写→风扇出风口→全尺寸HDMI插入→监听耳机插入→雨天户外S5M2继续工作。每个镜头0.8秒，配合快节奏BGM。
+      </div>
+    </div>
+  </div>
+
+  <!-- 角度7：L卡口联盟 -->
+  <div class="angle-block">
+    <div class="angle-header">
+      <span class="angle-num seven">7</span>
+      <span class="emoji">🔭</span>
+      <h3>L 卡口联盟：镜头比你想象的丰富得多</h3>
+    </div>
+    <div class="angle-body">
+      <h4>🎤 口播文案</h4>
+      <div class="script-block">
+        <p>富士用户另一个纠结的点：镜头群。富士原厂镜头选择少、价格贵，广角和长焦特殊焦段更是稀缺，第三方支持的力度也一般。</p>
+        <p>而松下采用的是 L 卡口——跟适马、徕卡组成了 L 卡口联盟。这意味着你除了松下原厂，还能用适马和徕卡的镜头。</p>
+        <p>松下自己的 F1.8 定焦军团——18mm、24mm、35mm、50mm、85mm，五支镜头物美价廉，外观尺寸重量一致，上稳定器不用重新调平。日常玩的话 20-60mm 套头够用，旅行多 28-200mm 天涯头一支走天下。</p>
+        <p>想玩极致的，适马 65mm F2——锐到我经常得套个黑柔来减弱数码感。纯金属做工，抚摸党直接高潮。</p>
+      </div>
+
+      <table class="compare-table">
+        <tr><th>对比维度</th><th>富士 X 卡口</th><th>松下 L 卡口</th></tr>
+        <tr><td>原厂镜头数量</td><td class="loser">约30+支（部分老旧）</td><td class="winner">松下+适马+徕卡，可选超百支</td></tr>
+        <tr><td>定焦军团</td><td class="loser">焦段分散，体积不统一</td><td class="winner">F1.8 军团五支，统一尺寸重心</td></tr>
+        <tr><td>24-105 焦段</td><td class="loser">16-80 F4勉强覆盖，画质差距大</td><td class="winner">适马/松下均有高素质标准变焦</td></tr>
+        <tr><td>微距镜头</td><td class="loser">80mm F2.8笨重、旋转对焦反直觉</td><td class="winner">适马 105mm F2.8 DG DN 等标杆可选</td></tr>
+        <tr><td>第三方支持</td><td class="loser">腾龙/适马部分支持，焦段不全</td><td class="winner">适马全系列原生L口，阵容强大</td></tr>
+      </table>
+
+      <div class="shot-note">
+        <strong>🎥 画面建议：</strong>一字排开五支松下F1.8定焦 → 特写每支镜头统一的67mm滤镜口径 → 快速切换适马65 F2金属质感细节 → 主播手持S5M2+28200天涯头扫街。字幕标注每支镜头参考价格。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== 结尾升华 ====== -->
+<div class="section">
+  <h2 class="section-title">🎯 结尾升华（约40秒）</h2>
+
+  <div class="script-block">
+    <p><strong>口播文案：</strong></p>
+    <p>最后说一句掏心窝的话——不是富士不好。富士的复古设计、直出色彩、胶片模拟，它有它不可替代的魅力。</p>
+    <p>但如果你现在手里有一万块预算，纠结到底是买富士 APS-C 还是咬咬牙上全画幅——我希望你看完这期心里有数了。</p>
+    <p>一台八千多的全画幅，对焦不抽搐了，视频不过热了，高感到 ISO 6400 还能用，LUT 直出比胶片模拟还自由——它叫松下 S5M2。你的下一台相机，何必是半幅？</p>
+  </div>
+
+  <div class="summary-box">
+    <h3>📋 一期总结：七大角度一句话</h3>
+    <p style="text-align:left;line-height:2;">
+      ① <strong>画幅</strong>：底大一级，夜景纯净度碾压<br>
+      ② <strong>直出</strong>：LUT = 无限胶片模拟，比富士还自由<br>
+      ③ <strong>视频</strong>：6K + 风扇无限录 + 电影级功能<br>
+      ④ <strong>价格</strong>：全画幅八千多，比你富士 APS-C 还便宜<br>
+      ⑤ <strong>对焦</strong>：相位对焦首秀，拍娃不再糊<br>
+      ⑥ <strong>配置</strong>：双卡槽+全尺寸HDMI，干活的安全感<br>
+      ⑦ <strong>镜头</strong>：适马徕卡加持，L卡口联盟比你想象的大
+    </p>
+  </div>
+
+  <div class="shot-note">
+    <strong>🎥 画面建议：</strong>主播把富士相机放到一旁，拿起S5M2走向镜头 → 画面渐黑 → 字幕弹出「松下 S5M2 · 你的第一台全画幅？」→ 结束。BGM：温暖上扬的轻电子。
+  </div>
+</div>
+
+<!-- ====== 制作备注 ====== -->
+<div class="info-card">
+  <div class="card-label">📋 拍摄与后期备注</div>
+  <ul class="check-list">
+    <li>所有富士 vs S5M2 对比画面务必同场景、同参数标注，增强可信度</li>
+    <li>价格数据以2026年5月市场行情为准，拍摄前更新</li>
+    <li>LUT 导入流程建议做手机录屏 + 相机屏幕双画面演示</li>
+    <li>富士对焦抽搐场景用真实抓拍（拍娃/宠物），不要摆拍</li>
+    <li>整期语调保持「实在、不拉踩」——富士用户也是潜在换门用户</li>
+    <li>弹幕互动预埋：在"价格对比"段落引导「兄弟们这账你们算算」</li>
+    <li>B Cut 建议：穿插S5M2+LUT直出的街拍样片，用画面说话</li>
+  </ul>
+</div>
+
+<div class="footer">
+  松下 S5M2 第二期策划 · 「富士升级全画幅」种草视频 · 2026.05.31<br>
+  <span style="font-size:12px;">数据来源：上期SRT字幕、公开市场报价、知乎/今日头条/中关村在线富士用户评测</span>
+</div>
+
+</div>
+</body>
+</html>

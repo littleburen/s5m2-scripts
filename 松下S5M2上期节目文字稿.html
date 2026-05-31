@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>松下S5M2上期节目文字稿</title>
+<style>
+  :root {
+    --bg: #fafaf8;
+    --card-bg: #ffffff;
+    --text: #2c2c2c;
+    --text-secondary: #5a5a5a;
+    --accent: #d44a2c;
+    --accent-light: #fef0ed;
+    --border: #e8e5e0;
+    --heading: #1a1a1a;
+    --tag-bg: #f3f0eb;
+    --divider: #e8e4dc;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 28px 80px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 0 48px;
+    border-bottom: 1px solid var(--divider);
+    margin-bottom: 48px;
+  }
+
+  .header .badge {
+    display: inline-block;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--heading);
+    letter-spacing: 0.02em;
+    line-height: 1.35;
+    margin-bottom: 12px;
+  }
+
+  .header .subtitle {
+    font-size: 15px;
+    color: var(--text-secondary);
+    font-weight: 400;
+  }
+
+  .header .meta {
+    margin-top: 16px;
+    font-size: 13px;
+    color: #999;
+  }
+
+  /* Section */
+  .section {
+    margin-bottom: 44px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--heading);
+    margin-bottom: 14px;
+    padding-left: 16px;
+    border-left: 3px solid var(--accent);
+    line-height: 1.4;
+  }
+
+  .section p {
+    font-size: 15.5px;
+    color: var(--text);
+    margin-bottom: 14px;
+    text-align: justify;
+    text-indent: 0;
+  }
+
+  .section p:last-child { margin-bottom: 0; }
+
+  /* Highlight box */
+  .highlight-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin: 18px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  }
+
+  .highlight-box .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+  }
+
+  .highlight-box p {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .highlight-box p:last-child { margin-bottom: 0; }
+
+  /* Feature list */
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .feature-list li {
+    font-size: 14.5px;
+    color: var(--text);
+    padding: 10px 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .feature-list li::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-top: 7px;
+    flex-shrink: 0;
+  }
+
+  /* Three pillar cards */
+  .pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 18px 0;
+  }
+
+  .pillar-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 16px;
+    text-align: center;
+  }
+
+  .pillar-card .number {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .pillar-card h4 {
+    font-size: 14px;
+    color: var(--heading);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .pillar-card p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  /* Blockquote */
+  .quote {
+    border-left: 2px solid var(--divider);
+    padding: 4px 0 4px 18px;
+    margin: 16px 0;
+    font-size: 14.5px;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid var(--divider);
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .container { padding: 32px 18px 48px; }
+    .header h1 { font-size: 23px; }
+    .section-title { font-size: 18px; }
+    .feature-list { grid-template-columns: 1fr; }
+    .pillar-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="badge">上期节目文字稿</div>
+    <h1>松下 S5M2：万元全画幅的错位竞争之王</h1>
+    <div class="subtitle">当之无愧的现金牛，专业与乐趣兼备的全能选手</div>
+    <div class="meta">主播：小不忍 &nbsp;|&nbsp; 基于节目SRT字幕整理精编</div>
+  </div>
+
+  <!-- 第一节 -->
+  <div class="section">
+    <h2 class="section-title">当之无愧的现金牛</h2>
+    <p>每家相机厂商都需要一款能贡献稳定销量的现金牛产品，稳住基本盘。对松下来说，这个位置毫无疑问属于充满性价比的 S5M2。</p>
+    <p>大家好，我是小不忍。之前做过很多期松下相机的节目，从卡片机 ZS99 到 M43 机型 GH6、G97、GX9，再到全画幅 S9。而 S5M2，是松下销量最高的机型。</p>
+  </div>
+
+  <!-- 第二节 -->
+  <div class="section">
+    <h2 class="section-title">专业气质，巧妙细节</h2>
+    <p>这台相机拿在手里非常熟悉，手感跟 GH6 特别像。全镁铝合金黑色外壳，红色点缀，扎实的拨盘——无不透露出它的专业定位。</p>
+    <p>仔细看会发现一个很不一样的地方：取景器下方有一个散热出风口。没错，这台机器支持主动散热，内置了一个小风扇。</p>
+
+    <div class="highlight-box">
+      <div class="label">设计亮点</div>
+      <p>内置风扇的位置相当巧妙——平时完全可以把它当成没有主动散热的普通相机，只有长时间录制、风扇开始工作时，你才会发现它带来的踏实感。</p>
+    </div>
+
+    <p>如果像这样长时间录口播视频，或者拍婚庆一场下来要几个小时，又或者搞直播——你就会知道主动散热风扇有多重要。没有风扇的话，机器长时间工作一般也就半小时，撑死四十分钟就会过热。</p>
+    <p>有小伙伴说可以在后面加一个外接散热风扇，但外接风扇本身也需要供电，除了给机器供电还得再给风扇供一套电，非常麻烦。</p>
+  </div>
+
+  <!-- 第三节 -->
+  <div class="section">
+    <h2 class="section-title">超越同级的水桶机配置</h2>
+    <p>除了散热风扇，其他专业水桶机该有的功能它一应俱全：</p>
+
+    <ul class="feature-list">
+      <li>全尺寸标准 HDMI</li>
+      <li>监听接口 &amp; 麦克风输入</li>
+      <li>双 SD 卡槽</li>
+      <li>电影宽荧幕镜头反挤压显示</li>
+    </ul>
+
+    <p>甚至有些只有专业电影机才有的功能它也具备。支持电影宽荧幕镜头的反挤压显示——这好像只有松下的机器有；支持角度快门，在一般视频机里也不常见。如果有专业拍摄需求，还可以付费解锁 ProRes RAW 格式外录，外接固态硬盘，就不用担心容量问题了。</p>
+  </div>
+
+  <!-- 第四节 -->
+  <div class="section">
+    <h2 class="section-title">为视频而生的防抖系统</h2>
+    <p>用过松下相机的小伙伴都知道，松下的防抖能力有多么强悍。很多相机的防抖是针对拍照设计的，一旦录视频，防抖模块会跟运镜"较劲"。而松下的防抖是专门为视频优化过的，运镜时防抖工作非常丝滑。</p>
+
+    <div class="quote">
+      打开电子防抖后，手持录制固定镜头、保持画面不动的情况下，跟上三脚架几乎没有区别——画面纹丝不动，看不出是手持的。非常厉害。
+    </div>
+
+    <p>这就是松下防抖的核心竞争力：它不是"帮你稳一点"，而是几乎可以替代三脚架的存在。</p>
+  </div>
+
+  <!-- 第五节 -->
+  <div class="section">
+    <h2 class="section-title">藏在专业外表下的多彩灵魂</h2>
+    <p>说到这儿，有小伙伴可能要说：这些专业功能我也用不上，买相机就是拍照、只会按快门。</p>
+    <p>千万不要被它沉稳专业的外观所蒙骗。在这黑色外观下，隐藏着一个非常有趣的灵魂——它能拍出绚丽多彩、各种滤镜风格的照片。</p>
+    <p>松下对 LUT 导入的支持是最强大、最友好的。什么叫 LUT 导入？就是从手机上下载滤镜导到相机里，几乎可以模仿任意风格的照片。只要能在网上找到的调色风格，就能下进去，甚至在手机上自己 DIY。</p>
+
+    <div class="pillar-grid">
+      <div class="pillar-card">
+        <div class="number">1</div>
+        <h4>照片视频双支持</h4>
+        <p>不像有些机器只能监看用，拍照完全没问题，仿佛机身内置</p>
+      </div>
+      <div class="pillar-card">
+        <div class="number">2</div>
+        <h4>开放通用标准</h4>
+        <p>支持 Cube 文件，手机就能导入，大幅降低门槛</p>
+      </div>
+      <div class="pillar-card">
+        <div class="number">3</div>
+        <h4>高自由度调节</h4>
+        <p>透明度可调、支持混色，两个滤镜混出专属风格</p>
+      </div>
+    </div>
+
+    <p>这些功能，除了松下，其他机器基本都做不到这么强。而且以我多年用松下相机的经验来看，即便不导入 LUT 滤镜，它自带的电影风格、标准、鲜艳等预设也足够好看。</p>
+  </div>
+
+  <!-- 第六节 -->
+  <div class="section">
+    <h2 class="section-title">终于补齐的最后一块短板</h2>
+    <p>大家听我吹了这么多，可能有小伙伴要说：松下的对焦你是一点都不提啊。</p>
+    <p>确实，在 S5M2 之前，松下只有反差对焦。包括我的 GH6 也是反差对焦，录视频时会有不断寻找焦点的轻微抽搐——这确实是大家一直诟病的问题。</p>
+
+    <div class="highlight-box">
+      <div class="label">重大升级</div>
+      <p>但在 S5M2 这一代，松下听劝了——直接把反差对焦升级成了<strong>相位对焦</strong>。这也是松下支持相位对焦的第一款机型。</p>
+    </div>
+
+    <p>这一升级对于松下来说意义重大：它意味着松下终于补齐了那块让用户纠结多年的短板，S5M2 不再是一台"除了对焦什么都好"的偏科生。</p>
+  </div>
+
+  <!-- 第七节 -->
+  <div class="section">
+    <h2 class="section-title">L 卡口联盟的丰富选择</h2>
+    <p>一个系统成熟的标志，不只是机身强大，还需要完善的镜头群。松下采用 L 卡口，与适马、徕卡组成了 L 卡口联盟。除了松下原厂镜头，还有适马和徕卡的镜头可选。</p>
+    <p>松下原厂镜头走物美价廉路线：日常玩玩的话，20-60mm 就很不错；旅行多的话，28-200mm 天涯头是不错的选择，日常用足够了。想玩定焦，松下有几支 F1.8 光圈的定焦——不追求金属外观，也不追求超大光圈，但做到了亲民的价格和扎实的光学素质。而且这几支定焦镜头都很有前瞻性地为视频做了优化：外观尺寸、重量、重心都差不多，上稳定器时不需要重新调平。</p>
+    <p>如果觉得原厂镜头不够极致，想买做工好、纯金属、上限高的镜头，可以去看适马。像适马 65mm F2，素质非常好，锐度已经达到"太锐了"的程度，经常需要套个黑柔来减弱数码感。纯金属外观、做工扎实，非常能满足抚摸党的需求。</p>
+  </div>
+
+  <!-- 第八节 -->
+  <div class="section">
+    <h2 class="section-title">错位竞争的万元机王者</h2>
+    <p>总的来看，松下 S5M2 之所以能在竞争如此激烈的万元机市场站稳脚跟，就是因为它通过错位竞争弥补了短板，同时用便宜不少的价格——八千多块——追齐了其他万元全画幅。</p>
+    <p>它不只是专业老法师的主力机位，也为普通消费者提供了不一样的拍照体验：可以模仿各种色彩风格，非常好玩。</p>
+
+    <div class="highlight-box" style="text-align: center;">
+      <p style="font-size: 16px; color: var(--heading); font-weight: 600; margin-bottom: 0;">
+        无论是老法师买来干活用，<br>还是普通消费者想买一台日常用的消费级相机，<br><span style="color: var(--accent);">S5M2 都是一个非常不错的选择。</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    松下 S5M2 上期节目 &nbsp;·&nbsp; 基于 SRT 字幕精编 &nbsp;·&nbsp; 2026.05.31
+  </div>
+
+</div>
+
+</body>
+</html>
